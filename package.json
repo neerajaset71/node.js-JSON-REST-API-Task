@@ -1,0 +1,13 @@
+{
+  "name": "restapi-nodejs",
+  "version": "1.0.0",
+  "description": "Node.js REST API Backend service",
+  "private": true,
+  "author": "Neeraj Joshi",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.1",
+    "request": "^2.79.0",
+    "underscore": "^1.8.3"
+  }
+}
