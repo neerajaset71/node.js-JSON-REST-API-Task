@@ -16,28 +16,28 @@ router.get('/', function (req, res) {
     res.json({ message: 'Welcome to the REST JSON API' });
 });
 
-//Retrieve all airports (using a GET at http://localhost:3000/airports)
+//Retrieve all airports from master data JSON API (using a GET at http://localhost:3000/airports)
 router.route('/airports').get(airports.all);
 
-//Retrieve all domestic airports (using a GET at http://localhost:3000/airports/domestic)
+//Retrieve all domestic airports by matching property regional_airport as true (using a GET at http://localhost:3000/airports/domestic)
 router.route('/airports/domestic').get(airports.byDomesticType);//Retrieve all domestic airports
 
-//Retrieve all international airports (using a GET at http://localhost:3000/airports/international)
+//Retrieve all international airports by matching property international_airport as true (using a GET at http://localhost:3000/airports/international)
 router.route('/airports/international').get(airports.byInternationalType);
 
-//Retrieve a single airport by matching airport code (case-insensitive) (using a GET at http://localhost:3000/airports/airportcode/:airportcode)
+//Retrieve a single airport by matching airport code equals code keyword (case-insensitive) (using a GET at http://localhost:3000/airports/airportcode/:airportcode)
 router.route('/airports/airportcode/:airportcode').get(airports.byAirportCode);
 
-//Retrieve all airports by matching airport name contains keyword (case-insensitive) (using a GET at http://localhost:3000/airports/airportname/:airportname)
+//Retrieve all airports by matching airport name contains name keyword (case-insensitive) (using a GET at http://localhost:3000/airports/airportname/:airportname)
 router.route('/airports/airportname/:airportname').get(airports.byAirportName);
 
-//Retrieve all airports by matching country code contains code (case-insensitive) (using a GET at http://localhost:3000/airports/countrycode/:countrycode)
+//Retrieve all airports by matching country code equals code keyword (case-insensitive) (using a GET at http://localhost:3000/airports/countrycode/:countrycode)
 router.route('/airports/countrycode/:countrycode').get(airports.byCountryCode);
 
-//Retrieve all airports by matching country name contains keyword (case-insensitive) (using a GET at http://localhost:3000/airports/countryname/:countryname)
+//Retrieve all airports by matching country name contains name keyword (case-insensitive) (using a GET at http://localhost:3000/airports/countryname/:countryname)
 router.route('/airports/countryname/:countryname').get(airports.byCountryName);
 
-//Retrieve all airports by matching either airport name or country name contains keyword (case-insensitive) (using a GET at http://localhost:3000/airports/displayname/:displayname)
+//Retrieve all airports by matching either airport name or country name contains name keyword (case-insensitive) (using a GET at http://localhost:3000/airports/displayname/:displayname)
 router.route('/airports/displayname/:displayname').get(airports.byDisplayName);
 
 module.exports = router;

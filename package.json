@@ -5,9 +5,37 @@
   "private": true,
   "author": "Neeraj Joshi",
   "license": "MIT",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "npm",
+    "express",
+    "request",
+    "underscore",
+    "should",
+    "supertest",
+    "REST",
+    "API",
+    "HTTP",
+    "JSON",
+    "mocha",
+    "BDD"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neerajaset71/node.js-JSON-REST-API-Task"
+  },
+  "homepage": "https://github.com/neerajaset71/node.js-JSON-REST-API-Task",
   "dependencies": {
     "express": "^4.14.1",
     "request": "^2.79.0",
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "should": "^11.2.0",
+    "supertest": "^3.0.0"
   }
 }
