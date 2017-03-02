@@ -3,15 +3,22 @@
 REST API Backend Service with Node.js, Express
 
 Requires "node.js" to be installed.
+
 Requires "express" to be installed using npm.
+
 Requires "request" to be installed using npm.
+
 Requires "underscore" to be installed using npm.
+
 
 **Initial Steps**
 
 npm install --save express
+
 npm install --save request
+
 npm install --save underscore
+
 npm install
 
 **Once "node_modules" folder gets created using above steps, then below command is needed to start the server**
